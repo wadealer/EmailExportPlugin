@@ -1,0 +1,29 @@
+<?php
+
+$s_plugin_EmailExport_title = 'Export issues to email';
+$s_plugin_EmailExport_description = 'Adds ability export issues and send wia email.';
+
+$s_plugin_EmailExport_export = 'XML Export';
+
+$s_plugin_EmailExport_config_title     = 'Email Export Configuration';
+$s_plugin_EmailExport_config_export_threshold_title = 'Export issues threshold';
+$s_plugin_EmailExport_config_email_theme_title = 'Default email theme';
+$s_plugin_EmailExport_config_email_text_title = 'Default email body';
+$s_plugin_EmailExport_config_email_from_title = 'Send email from';
+
+$s_plugin_EmailExport_email_theme = 'Issues from bugtracker';
+$s_plugin_EmailExport_email_text  = 'Issues list from bugtracker';
+
+$s_plugin_EmailExport_action_update = 'Update';
+
+$s_plugin_EmailExport_cross_references = 'Cross references';
+$s_plugin_EmailExport_default_strategy = 'Default conversion strategy:';
+$s_plugin_EmailExport_renumber = 'Renumber';
+$s_plugin_EmailExport_renumber_desc = 'Try to convert references to new numbering';
+$s_plugin_EmailExport_link = 'Link';
+$s_plugin_EmailExport_link_desc = 'Convert into a link to the original item';
+$s_plugin_EmailExport_disable = 'Disable';
+$s_plugin_EmailExport_disable_desc = 'Disable the link';
+
+
+$s_plugin_EmailExport_error_no_xml = 'can not find xmlreader and xmlwriter extensions';
