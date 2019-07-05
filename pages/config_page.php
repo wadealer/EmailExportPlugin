@@ -9,6 +9,8 @@ layout_page_header(plugin_lang_get('config_title'));
 layout_page_begin('manage_overview_page.php');
 
 print_manage_menu('manage_plugin_page.php');
+
+$g_project = helper_get_current_project();
 ?>
 
 <div class="col-md-12 col-xs-12">
@@ -39,7 +41,7 @@ print_manage_menu('manage_plugin_page.php');
 											<select id="export_threshold" name="export_threshold" class="input-sm"><?php
 												print_enum_string_option_list(
 													'access_levels',
-													plugin_config_get('export_threshold')
+													plugin_config_get('export_threshold', null, false, null, $g_project)
 												);
 												?></select>
 										</td>
@@ -51,7 +53,7 @@ print_manage_menu('manage_plugin_page.php');
 										</td>
 										<td>
 											<input type="text" id="email_theme" name="email_theme" class="form-control"
-											       value="<?php echo plugin_config_get('email_theme'); ?>" />
+											       value="<?php echo plugin_config_get('email_theme', null, false, null, $g_project); ?>" />
 										</td>
 									</tr>
 
@@ -61,7 +63,7 @@ print_manage_menu('manage_plugin_page.php');
 											<?php echo plugin_lang_get('config_email_text_title') ?>
 										</td>
 										<td>
-											<textarea id="email_text" name="email_text" class="form-control" ><?php echo plugin_config_get('email_text'); ?></textarea>
+											<textarea id="email_text" name="email_text" class="form-control" ><?php echo plugin_config_get('email_text', null, false, null, $g_project); ?></textarea>
 										</td>
 									</tr>
 
@@ -70,8 +72,18 @@ print_manage_menu('manage_plugin_page.php');
 											<?php echo plugin_lang_get('config_email_from_title') ?>
 										</td>
 										<td>
-											<input type="text" id="email_theme" name="email_from" class="form-control"
-											       value="<?php echo plugin_config_get('email_from'); ?>" />
+											<input type="text" id="email_from" name="email_from" class="form-control"
+											       value="<?php echo plugin_config_get('email_from', null, false, null, $g_project); ?>" />
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="category" width="15%">
+											<?php echo plugin_lang_get('config_email_to_title') ?>
+										</td>
+										<td>
+											<input type="text" id="email_to" name="email_to" class="form-control"
+											       value="<?php echo plugin_config_get('email_to', null, false, null, $g_project); ?>" />
 										</td>
 									</tr>
 

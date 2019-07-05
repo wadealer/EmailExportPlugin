@@ -1,0 +1,29 @@
+<?php
+
+$s_plugin_EmailExport_title = 'Экспорт задач на электронную почту';
+$s_plugin_EmailExport_description = 'Добавляет возможность экспорта задач и отправки их по электронной почте.';
+
+$s_plugin_EmailExport_export = 'Экспорт в электронную почту';
+
+$s_plugin_EmailExport_config_title			= 'Конфигурация экспорта в электронную почту';
+$s_plugin_EmailExport_config_export_threshold_title	= 'Уровень доступа к экспорту (Все проекты)';
+$s_plugin_EmailExport_config_email_theme_title		= 'Тема электронной почты по умолчанию';
+$s_plugin_EmailExport_config_email_text_title		= 'Тело электронной почты по умолчанию';
+$s_plugin_EmailExport_config_email_from_title		= 'Отправить письмо от';
+$s_plugin_EmailExport_config_email_to_title		= 'Отправить письмо на';
+
+$s_plugin_EmailExport_email_theme_title	= 'Тема электронной почты';
+$s_plugin_EmailExport_email_text_title	= 'Тело электронной почты';
+$s_plugin_EmailExport_email_from_title	= 'Отправить письмо от';
+$s_plugin_EmailExport_email_to_title	= 'Отправить письмо на';
+$s_plugin_EmailExport_email_copy_title	= 'Отправить копию письма мне';
+
+$s_plugin_EmailExport_email_theme = 'Список задач';
+$s_plugin_EmailExport_email_text  = 'Список задач из трекера ошибок';
+
+$s_plugin_EmailExport_action_update = 'Обновить';
+
+$s_plugin_EmailExport_export_page_title = 'Отправить письмо';
+
+$s_plugin_EmailExport_send_ok	 = 'Сообщение было отправлено';
+$s_plugin_EmailExport_send_error = 'Сообщение не может быть отправлено. Ошибка почтовой программы: ';

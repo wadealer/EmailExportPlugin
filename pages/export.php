@@ -66,6 +66,9 @@ $mail->setFrom(gpc_get_string('email_from'));
 $mail->addReplyTo(gpc_get_string('email_from'));
 
 $mail->addAddress(gpc_get_string('email_to'));
+if(gpc_get_bool("email_copy")) {
+	$mail->addCC(gpc_get_string('email_from'));
+}
 
 $mail->addAttachment($fname, 'export.csv');
 
@@ -78,8 +81,9 @@ $result = $mail->send();
 
 unlink($fname);
 
+$t_redirect_url = 'view_all_bug_page.php';
 layout_page_header(plugin_lang_get('export_page_title'));
-layout_page_begin();
+layout_page_begin($t_redirect_url);
 
 if($result) {
 	html_operation_successful($t_redirect_url, plugin_lang_get("send_ok"));
@@ -88,5 +92,5 @@ else {
 	html_operation_failure($t_redirect_url, plugin_lang_get("send_error") . $mail->ErrorInfo);
 }
 
-form_security_purge('plugin_EmailExport_config');
+form_security_purge('plugin_EmailExport_export');
 layout_page_end();
