@@ -18,7 +18,7 @@ class EmailExportPlugin extends MantisPlugin {
 
 		$this->author = 'Evgeny Khryukin';
 		$this->contact = 'wadealer@gmail.com';
-		$this->url = 'https://www.unitwest.com.ua';
+		$this->url = 'https://github.com/wadealer/EmailExportPlugin';
 	}
 
 	/**
